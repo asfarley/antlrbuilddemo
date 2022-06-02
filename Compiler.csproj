@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Inputs\Testlang.g4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Antlr4 Include="Inputs\Testlang.g4">
+      <AntOutDir>./Generated</AntOutDir>
+    </Antlr4>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.10.1" />
+    <PackageReference Include="Antlr4BuildTasks" Version="10.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Generated\" />
+  </ItemGroup>
+
+</Project>
